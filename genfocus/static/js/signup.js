@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function(){
     }
 
     function handleChange() {
-        const [username, email, password, confirmPassword] = inputs;
+        const [username, name, lastname, cpf, civil_state, email, password, confirmPassword] = inputs;
         const isUsernameValid = username.value.length >= 3;
         const isPasswordValid = password.value.length >= 6;
         const isValidEmail = (email) => email.includes('@');

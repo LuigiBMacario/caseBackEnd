@@ -1,38 +1,32 @@
-const inputs = document.querySelectorAll('.input');
-const button = document.querySelector('.signup-button');
+document.addEventListener('DOMContentLoaded', function(){
+    const inputs = document.querySelectorAll('.input');
+    const button = document.querySelector('.signup-button');
 
-const handleFocus = ({ target }) =>{
-    const span = target.previousElementSibling;
-    span.classList.add('span-active');
-}
+    inputs.forEach((input) => input.addEventListener('focus', handleFocus));
+    inputs.forEach((input) => input.addEventListener('focusout', handleFocusOut));
+    inputs.forEach((input) => input.addEventListener('input', handleChange));
 
-const handleFocusOut = ({ target }) =>{
-    if (target.value == ''){
+    function handleFocus({target}){
         const span = target.previousElementSibling;
-        span.classList.remove('span-active');
+        span.classList.add('span-active');
     }
-}
 
-const handleChange = () => {
-    console.log('handleChange')
-    const [username, password] = inputs;
-    const isUsernameValid = username.value.length >= 3;
-    const isPasswordValid = password.value.length >= 6;
-    if (isUsernameValid && isPasswordValid) {
-        button.removeAttribute('disabled');
-    } else {
-        button.setAttribute('disabled', '');
+    function handleFocusOut({ target }) {
+        if (target.value === ''){
+            const span = target.previousElementSibling;
+            span.classList.remove('span-active');
+        }
     }
-}
 
-inputs.forEach((input) =>
-    input.addEventListener('focus', handleFocus)
-);
-inputs.forEach((input) =>
-    input.addEventListener('focusout', handleFocusOut)
-);
-
-inputs.forEach((input) =>
-    input.addEventListener('input', handleChange)
-);
+    function handleChange() {
+        const [username, password] = inputs;
+        const isUsernameValid = username.value.length >= 3;
+        const isPasswordValid = password.value.length >= 6;
+        if (isUsernameValid && isPasswordValid) {
+            button.removeAttribute('disabled');
+        } else {
+            button.setAttribute('disabled', '');
+        }
+    }
+})
 

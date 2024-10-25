@@ -1,3 +1,4 @@
+{% load i18n %}
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -5,23 +6,92 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'css/index.css'%}">
+    <link rel="icon" href="{% static 'media/logo.png'%}" type="image/x-icon">
     <title>Home | Gen Focus</title>
 </head>
 <body>
+    <div class="bg-animation">
+        <div class="bubbles">
+            <span style="--i:11;"></span>
+            <span style="--i:12;"></span>
+            <span style="--i:24;"></span>
+            <span style="--i:10;"></span>
+            <span style="--i:14;"></span>
+            <span style="--i:23;"></span>
+            <span style="--i:18;"></span>
+            <span style="--i:16;"></span>
+            <span style="--i:19;"></span>
+            <span style="--i:20;"></span>
+            <span style="--i:22;"></span>
+            <span style="--i:25;"></span>
+            <span style="--i:18;"></span>
+            <span style="--i:21;"></span>
+            <span style="--i:15;"></span>
+            <span style="--i:13;"></span>
+            <span style="--i:26;"></span>
+            <span style="--i:17;"></span>
+            <span style="--i:13;"></span>
+            <span style="--i:28;"></span>
+            <span style="--i:11;"></span>
+            <span style="--i:12;"></span>
+            <span style="--i:24;"></span>
+            <span style="--i:10;"></span>
+            <span style="--i:14;"></span>
+            <span style="--i:23;"></span>
+            <span style="--i:18;"></span>
+            <span style="--i:16;"></span>
+            <span style="--i:19;"></span>
+            <span style="--i:20;"></span>
+            <span style="--i:22;"></span>
+            <span style="--i:25;"></span>
+            <span style="--i:18;"></span>
+            <span style="--i:21;"></span>
+            <span style="--i:15;"></span>
+            <span style="--i:13;"></span>
+            <span style="--i:26;"></span>
+            <span style="--i:17;"></span>
+            <span style="--i:13;"></span>
+            <span style="--i:28;"></span>
+        </div>
+    </div>
     <div class="container">
         <header>
+            <div class="logo-placeholder">
+                <img src="{% static 'media/logo.png'%}" class="logo" alt="GenFocus logo">
+                <h1>GenFocus</h1>
+            </div>
             <ul>
                 {% if request.user.is.authenticated %}
                 <li><a href="{% url 'logout' %}">Logout</a></li>
                 {% else %}
                 <li><a href="{% url 'login' %}">Login</a></li>
-                <li></li><a href="{% url 'signup' %}">Sign up</a></li>
+                <li><a href="{% url 'signup' %}">Sign up</a></li>
                 {% endif %}
             </ul>
         </header>
-        <nav></nav>
-        <main></main>
-        <aside></aside>
+        <nav hidden></nav>
+        <main class="content">
+            <div class="main-introduction">
+                <h1>GENFOCUS</h1>
+                <a href="{% url 'signup'%}">{% translate "Start Now!"%}</a>
+            </div>
+            <div class="spacer layer1"></div>
+            <div class="main-info">
+                <div class="cards">
+                    <div class="wrapper">
+                        <h2 class="card-title">USUÁRIOS CADASTRADOS</h2>
+                        <h3 class="card-numerical">{{ total_users }}</h3>
+                        <p>Cadastrados de forma segura e eficiente pelo GenFocus</p>
+                    </div>
+                    <div class="wrapper">
+                        <a href="{% url 'users_list' %}">Acessar Registros</a>
+                    </div>
+                </div>
+                <div class="cards"></div>
+                <div class="cards"></div>
+            </div>
+        </main>
+        <aside hidden></aside>
         <footer></footer>
     </div>
 </body>

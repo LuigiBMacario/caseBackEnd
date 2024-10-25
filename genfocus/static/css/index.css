@@ -2,7 +2,72 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: sans-serif;
+    font-family: 'Poppins',sans-serif;
+}
+
+:root{
+    --white: #FFF;
+    --whitesmoke: #f9f9f9;
+    --light-grey: #ECECEC;
+    --grey: #C4C4C4;
+    --medium-grey: #a7a7a7;
+    --deep-grey: #343434;
+    --black: #000000;
+    --blue: #1B77F3;
+    --red: #CF3C3F;
+}
+
+a{
+    text-decoration: none;
+}
+
+body{
+    background: #0c192c;
+    overflow-x: hidden;
+}
+
+.bg-animation{
+    position: absolute;
+    width: 100%;
+    min-width: 1879px;
+    height: 100vh;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.bubbles{
+    position: relative;
+    display: flex;
+}
+
+.bubbles span{
+    position: relative;
+    height: 30px;
+    width: 30pc;
+    background: #4fc3dc;
+    margin: 0 4px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 10px #4fc3dc44,
+    0 0 50px #4fc3dc,
+    0 0 100px #4fc3dc;
+    animation: animate 15s linear infinite;
+    animation-duration: calc(125s / var(--i));
+}
+
+.bubbles span:nth-child(even){
+    background: #ff2d75;
+    box-shadow: 0 0 0 10px #ff2d7544,
+    0 0 50px #ff2d75,
+    0 0 100px #ff2d75;
+}
+
+@keyframes animate{
+    0%{
+        transform: translateY(100vh) scale(0);
+    }
+    100%{
+        transform: translateY(-10vh) scale(1);
+    }
 }
 
 .container{
@@ -17,15 +82,162 @@
 }
 
 header{
+    position: absolute;
     grid-area: header;
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding: 20px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo-placeholder{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-placeholder h1{
+    color: white;
+    margin-left: 15px;
+}
+
+header .logo{
+    width: 80px;
+}
+
+header ul li{
+    list-style: none;
+    display: inline-block;
+    margin-left: 40px;   
+}
+
+header ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 17px;
 }
 
 nav{
     grid-area: nav;
 }
 
-main{
+.content{
     grid-area: content;
+    text-align: center;
+    align-self: center;
+}
+
+.main-introduction h1{
+    font-size: 160px;
+    color: white;
+    font-weight: 600;
+    transition: 0.5s;
+    cursor: default;
+}
+
+.main-introduction h1:hover{
+    -webkit-text-stroke: 2px white;
+    color: transparent;
+}
+
+.main-introduction a{
+    text-decoration: none;
+    display: inline-block;
+    color: white;
+    font-size: 24px;
+    border: 2px solid white;
+    padding: 14px 70px;
+    border-radius: 50px;
+    margin-top: 20px;
+    transition: 0.5s;
+}
+
+.main-introduction a:hover{
+    color: #0c192c;
+    background-color: white;
+}
+
+.main-introduction{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.spacer{
+    aspect-ratio: 960/300;
+    position: absolute;
+    left: 0;
+    width: 105%;
+    max-width: 1879px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    z-index: 0;
+}
+
+.layer1{
+    background-image: url('../media/layer1.svg');
+}
+
+.main-info{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.main-info .cards{
+    width: 100%;
+    height: 500px;
+    margin-top: 300px;
+    background-color: var(--whitesmoke);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 1;
+}
+
+.card-title{
+    padding-top: 25px;
+    font-size: 1.5em;
+    color: var(--deep-grey);
+}
+
+.card-numerical{
+    color: var(--deep-grey);
+    padding-top: 20px;
+    font-size: 5em;
+}
+
+.cards p{
+    margin-top: 20px;
+    padding: 0 10px;
+    font-size: 1.15em;
+}
+
+.cards a{
+    text-decoration: none;
+    display: inline-block;
+    color: var(--deep-grey);
+    font-size: 1.15em;
+    border: 2px solid var(--deep-grey);
+    padding: 14px 70px;
+    border-radius: 50px;
+    transition: 0.5s;
+    margin-bottom: 35px;
+}
+
+.cards a:hover{
+    color: var(--whitesmoke);
+    background-color: var(--red);
+    border: 2px solid var(--whitesmoke);
 }
 
 aside{

@@ -26,11 +26,13 @@ body, html {
 
 main{
     display: flex;
+    height: 100vh;
 }
 
 .form{
     width: 100%;
     height: 100%;
+    justify-content: space-between;
 }
 
 .login{

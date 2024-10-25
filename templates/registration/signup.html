@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'css/signup.css'%}">
     <script src="{% static 'js/signup.js'%}"></script>
+    <link rel="icon" href="{% static 'media/logo.png'%}" type="image/x-icon">
     <title>Sign Up | GenFocus</title>
 </head>
 <body>
@@ -13,33 +14,57 @@
         <img class="anim-image" src="" alt="">
         <div class="form-container">
             <div class="wrapper">
-                <a href="{% url 'home' %}">
-                    <img class="logo" src="" alt="">
-                </a>
             <h1 class="signup-title">
-                Inscrever-se
+                GenFocus | Inscrever-se
             </h1>
                 <form action="{% url 'signup'%}" method="post" class="form">
                     {% csrf_token %}
-                    <label class="signup-label" name="username">
+                    <label class="signup-label" id="username" name="username">
                         <span>
                             Nome de usuário
                         </span>
                         <input type="text" name="username" class="input" required autocomplete="username">
                     </label>
-                    <label class="signup-label" name="email">
+                    <label class="signup-label" id="name" name="name">
+                        <span>
+                            Nome
+                        </span>
+                        <input type="text" name="name" class="input" required autocomplete="username">
+                    </label>
+                    <label class="signup-label" id="lastname" name="lastname">
+                        <span>
+                            Sobrenome
+                        </span>
+                        <input type="text" name="lastname" class="input" required autocomplete="username">
+                    </label>
+                    <label class="signup-label" id="cpf" name="cpf">
+                        <span>
+                            CPF
+                        </span>
+                        <input type="text" name="cpf" class="input" required autocomplete="123.456.789-10">
+                    </label>
+                    <label class="signup-label" id="civil_state" name="civil_state">
+                        <span class="span-active">
+                            Estado Civil
+                        </span>
+                        <select name="civil_state" class="input" required autocomplete="solteiro">
+                            <option value="solteiro">Solteiro(a)</option>
+                            <option value="casado">Casado(a)</option>
+                        </select>
+                    </label>
+                    <label class="signup-label" id="email" name="email">
                         <span>
                             E-mail
                         </span>
                         <input type="email" name="email" class="input" required autocomplete="email">
                     </label>
-                    <label class="signup-label" name="password">
+                    <label class="signup-label" id="password" name="password">
                         <span>
                             Senha
                         </span>
                         <input type="password" name="password" class="input" required autocomplete="123456">
                     </label>
-                    <label class="signup-label" name="confirm-password">
+                    <label class="signup-label" id="confirm-password" name="confirm-password">
                         <span>
                             Confirme a senha
                         </span>

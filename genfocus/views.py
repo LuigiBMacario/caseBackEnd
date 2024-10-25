@@ -4,11 +4,14 @@ from django.contrib.auth.models import User
 from django.contrib.auth import authenticate
 from django.contrib.auth import login as login_django
 from django.contrib.auth import logout as logout_django
+from .models import Profile
 
 # Create your views here.
 
 def home(request):
-    return render(request, 'index.html')
+    total_users = User.objects.count()
+    context = {'total_users': total_users}
+    return render(request, 'index.html', context)
 
 def login(request):
     if request.user.is_authenticated:
@@ -39,13 +42,19 @@ def signup(request):
             username = request.POST.get('username')
             email = request.POST.get('email')
             password = request.POST.get('password')
+            name = request.POST.get('name')
+            lastname = request.POST.get('lastname')
+            cpf = request.POST.get('cpf')
+            civil_state = request.POST.get('civil_state')
 
             user = User.objects.filter(username=username).first()
 
             if user:
-                return render(request, 'registration/signup.html')
-            user = User.objects.create_user(username=username, email=email, password=password)
+                return render(request, 'registration/login.html')
+            user = User.objects.create_user(username=username, email=email, password=password, first_name=name, last_name=lastname)
             user.save()
+            userprofile = Profile.objects.create(cpf=cpf, civil_state=civil_state)
+            userprofile.save()
             login_django(request, user)
             return render(request, 'usergen/main.html')
 
@@ -57,3 +66,7 @@ def logout(request):
 @login_required
 def usergen(request):
     return render(request, 'usergen/main.html')
+
+@login_required
+def users_list(request):
+    return render(request, 'usergen/userslist.html')
