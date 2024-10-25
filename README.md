@@ -55,7 +55,7 @@ Cada pessoa cadastrada na API possui os seguintes atributos:
 
 1. Execute a aplicação:
    ```bash
-   unicorn main:app --reload
+   python manage.py runserver
    
 2. Acesse a API em:
    http://127.0.0.1:8000
