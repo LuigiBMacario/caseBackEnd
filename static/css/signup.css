@@ -45,18 +45,14 @@ body, html {
 
 .form-container {
     position: absolute;
-    height: 90vh;
-    width: 1050px;
+    height: 80vh;
+    width: 850px;
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
     opacity: 0;
     background-color: var(--whitesmoke);
     border-radius: 15px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
     transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out, bottom 0.5s ease-in-out;
 }
 
@@ -109,6 +105,22 @@ body, html {
     color: var(--deep-grey);
     font-size: 1.5em;
     margin-bottom: 30px;
+}
+
+.form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    'username email'
+    'name lastname'
+    'cpf civil_state'
+    'password confirm-password'
+    'bottom-wrapper bottom-wrapper';
+    height: 60vh;
+    width: 80%;
+    gap: 20px;
+    max-height: 80vh;
 }
 
 .signup-label {
@@ -192,12 +204,13 @@ body, html {
 
 .wrapper {
     padding: 50px;
-    display: flex;
+    position: absolute;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     text-align: center;
     width: 100%;
+    display: flex;
 }
 
 .bottom-wrapper {
@@ -211,14 +224,45 @@ body, html {
     margin-top: 30px;
 }
 
-.form {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-row: 1fr 1fr 1fr 1fr;
-    grid-template-areas: 
-    'username email'
-    'name lastname'
-    'cpf civil_state'
-    'password confirm-password';
-    width: 80%;
+@media (max-width: 1024px) {
+    .form-container{
+        width: 90%;
+        height: 86vh;
+    }
+
+    .signup-title{
+        font-size: 1.25em;
+    }
+
+    .form{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: 
+        'username'
+        'name'
+        'lastname'
+        'email'
+        'cpf'
+        'civil_state'
+        'password'
+        'confirm-password';
+        gap: 10px;
+        width: 100%;
+    }
+    
+    .signup-label{
+        margin: 0;
+    }
+
+    .bottom-wrapper{
+        margin: 0;
+    }
+
+    .signup-link{
+        font-size: 0.6em;
+    }
+
+    .signup-button{
+        margin-bottom: 20px;
+    }
 }

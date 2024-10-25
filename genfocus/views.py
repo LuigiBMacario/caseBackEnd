@@ -69,4 +69,5 @@ def usergen(request):
 
 @login_required
 def users_list(request):
-    return render(request, 'usergen/userslist.html')
+    users = {'users': User.objects.all()}
+    return render(request, 'usergen/userslist.html', users)

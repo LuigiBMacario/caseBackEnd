@@ -1,11 +1,12 @@
 document.addEventListener('DOMContentLoaded', function(){
     const inputs = document.querySelectorAll('.input');
-    const button = document.querySelector('.signup-button');
+    const button = document.querySelector('.login-button');
 
-    inputs.forEach((input) => input.addEventListener('focus', handleFocus));
-    inputs.forEach((input) => input.addEventListener('focusout', handleFocusOut));
-    inputs.forEach((input) => input.addEventListener('input', handleChange));
-
+    if (inputs.length > 0 && button) {
+        inputs.forEach((input) => input.addEventListener('focus', handleFocus));
+        inputs.forEach((input) => input.addEventListener('focusout', handleFocusOut));
+        inputs.forEach((input) => input.addEventListener('input', handleChange));
+    }
     function handleFocus({target}){
         const span = target.previousElementSibling;
         span.classList.add('span-active');

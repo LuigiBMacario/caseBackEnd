@@ -1,11 +1,47 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+    {% load static %}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registro de Usuários | GenFocus</title>
+    <link rel="stylesheet" href="{% static 'css/userlist.css'%}">
+    <title>Registro de Usuários | ItaFocus</title>
 </head>
 <body>
-    
+    <div class="container">
+        <header>
+            <div class="logo-placeholder">
+                <img src="{% static 'media/logo.png'%}" class="logo" alt="GenFocus logo">
+                <h1>ItaFocus</h1>
+            </div>
+            <ul>
+                {% if request.user.is.authenticated %}
+                <li><a href="{% url 'logout' %}">Logout</a></li>
+                {% else %}
+                <li><a href="{% url 'login' %}">Login</a></li>
+                <li><a href="{% url 'signup' %}">Sign up</a></li>
+                {% endif %}
+            </ul>
+        </header>
+        <nav></nav>
+        <main class="content">
+            <table>
+                <tr>
+                    <th>id</th>
+                    <th>nome</th>
+                    <th>email</th>
+                </tr>
+                {% for user in users %}
+                <tr>
+                    <td>{{ user.id_users }}</td>
+                    <td>{{ user.username }}</td>
+                    <td>{{ user.email }}</td>
+                </tr>
+                {% endfor %}
+            </table>
+        </main>
+        <aside></aside>
+        <footer></footer>
+    </div>
 </body>
 </html>

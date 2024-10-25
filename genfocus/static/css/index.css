@@ -259,4 +259,8 @@ footer{
         'sidebar'
         'footer';
     }
+
+    .main-introduction{
+        max-width: 90%;
+    }
 }

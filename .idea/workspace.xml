@@ -4,17 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cbe18b92-8574-48e1-bbe2-bb0256c8a43d" name="Changes" comment="Reworked project">
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+    <list default="true" id="cbe18b92-8574-48e1-bbe2-bb0256c8a43d" name="Changes" comment="Documentation update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/genfocus/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/genfocus/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/genfocus/static/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/genfocus/static/css/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/genfocus/static/css/signup.css" beforeDir="false" afterPath="$PROJECT_DIR$/genfocus/static/css/signup.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/genfocus/static/js/signup.js" beforeDir="false" afterPath="$PROJECT_DIR$/genfocus/static/js/signup.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/genfocus/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/genfocus/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/genfocus/static/css/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/genfocus/static/css/login.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/genfocus/static/js/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/genfocus/static/js/login.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/genfocus/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/genfocus/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/index.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/css/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/login.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/css/signup.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/signup.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/js/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/login.js" afterDir="false" />
@@ -22,6 +18,8 @@
       <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/registration/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/registration/login.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/registration/signup.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/registration/signup.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/usergen/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/usergen/main.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/usergen/userslist.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/usergen/userslist.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,12 +29,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/LuigiBMacario/caseBackEnd.git",
-    "accountId": "ca3a123c-5759-4204-9b1f-fd1425718ca3"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;LuigiBMacario&quot;
   }
-}]]></component>
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/LuigiBMacario/caseBackEnd.git&quot;,
+    &quot;accountId&quot;: &quot;ca3a123c-5759-4204-9b1f-fd1425718ca3&quot;
+  }
+}</component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
@@ -49,21 +53,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenDjangoStructureViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "django.template.preview.state": "SHOW_EDITOR",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenDjangoStructureViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;django.template.preview.state&quot;: &quot;SHOW_EDITOR&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="djangoBackEnd" type="Python.DjangoServer" factoryName="Django server">
       <module name="djangoBackEnd" />
@@ -106,7 +110,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1729792481329</updated>
-      <workItem from="1729792482667" duration="42385000" />
+      <workItem from="1729792482667" duration="47108000" />
+      <workItem from="1729887923589" duration="1228000" />
     </task>
     <task id="LOCAL-00001" summary="Reworked project">
       <option name="closed" value="true" />
@@ -132,7 +137,47 @@
       <option name="project" value="LOCAL" />
       <updated>1729826411675</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Reworked project">
+      <option name="closed" value="true" />
+      <created>1729882791946</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1729882791946</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Documentation update">
+      <option name="closed" value="true" />
+      <created>1729883839798</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1729883839798</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Documentation update">
+      <option name="closed" value="true" />
+      <created>1729883916404</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1729883916404</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Documentation update">
+      <option name="closed" value="true" />
+      <created>1729883957135</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1729883957135</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Documentation update">
+      <option name="closed" value="true" />
+      <created>1729884917896</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1729884917896</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -140,6 +185,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Reworked project" />
-    <option name="LAST_COMMIT_MESSAGE" value="Reworked project" />
+    <MESSAGE value="Documentation update" />
+    <option name="LAST_COMMIT_MESSAGE" value="Documentation update" />
   </component>
 </project>

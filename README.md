@@ -40,12 +40,13 @@ Cada pessoa cadastrada na API possui os seguintes atributos:
    git clone https://github.com/LuigiBMacario/caseBackEnd.git
 2. Acesse o diretório do projeto:
    ```bash
-   cd djangoBackEnd
+   cd caseBackEnd
 3. Crie um ambiente virtual e ative-o:
     ```bash
     python3 -m venv venv
     source venv/bin/activate # Para sistemas Unix
     venv\Scripts\activate # Para Windows
+    # Caso não tenha o python instalado, será necessario efetuar a sua instalação. Você instalar o python pela Microsoft Store ou pelo site oficial: https://www.python.org/downloads/
 4. Instale as dependências:
    ```bash 
    pip install -r requirements.txt

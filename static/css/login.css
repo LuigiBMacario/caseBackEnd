@@ -32,6 +32,9 @@ main{
 .form{
     width: 100%;
     height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: space-between;
 }
 
@@ -42,8 +45,13 @@ main{
     justify-content: space-between;
     width: 100%;
     max-width: 500px;
-    min-width:100vh;
+    min-height:100vh;
     padding: clamp(35px, 8%, 70px);
+}
+
+.logo{
+    width: 130px;
+    margin-bottom: 80px;
 }
 
 .wrapper{
@@ -63,7 +71,7 @@ main{
 .login-label{
     width: 100%;
     display: block;
-    margin-bottom: 30px;
+    margin-bottom: 15px;
 }
 
 .input{
@@ -104,7 +112,38 @@ main{
     flex-direction: row;
     gap: 10px;
     width: 100%;
-    margin-top: 20px;
+    margin-top: 10px;
+    margin-bottom: 60px;
+}
+
+.provider-name{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+    background-color: var(--deep-grey);
+    z-index: 3;
+    height: 30%;
+    width: 0%;
+    transition: 0.1s ease;
+}
+
+.provider-name p{
+    cursor: default;
+    visibility: hidden;
+    color: var(--light-grey);
+    font-weight: 700;
+    font-size: 1em;
+}
+
+.icons-button:hover .provider-name{
+    visibility: visible;
+    width: 80%;
+}
+
+.icons-button:hover .provider-name p{
+    visibility: visible;
 }
 
 .login-icons img{
@@ -118,8 +157,11 @@ main{
     justify-content: center;
     height: 35px;
     border-radius: 5px;
-    cursor: pointer;
+    cursor: default;
     border: none;
+    overflow: clip;
+    z-index: 0;
+    position: relative;
 }
 
 .login-icons .icons-button:nth-child(1){
@@ -137,7 +179,7 @@ main{
 .login-button{
     width: 60px;
     height: 60px;
-    padding: 20px;
+    padding: 15px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -163,11 +205,12 @@ main{
 }
 
 .login-link{
-    font-size: 0.8em;
+    font-size: 0.9em;
+    font-weight: 500;
     text-decoration: none;
     color: var(--medium-grey);
     text-transform: uppercase;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
     font-weight: 700;
 }
 
@@ -177,11 +220,4 @@ main{
     background-size: cover;
     background-position: center;
     flex: 1;
-}
-
-.sorry-blocked{
-    position: absolute;
-    text-align: center;
-    width: 100%;
-    background-color: rgba(50, 50, 50, 100);
 }
