@@ -49,3 +49,5 @@ Cada pessoa cadastrada na API possui os seguintes atributos:
 4. Instale as dependências:
    ```bash 
    pip install -r requirements.txt
+
+## Uso
