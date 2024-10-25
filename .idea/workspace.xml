@@ -4,23 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cbe18b92-8574-48e1-bbe2-bb0256c8a43d" name="Changes" comment="Documentation update">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/genfocus/static/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/genfocus/static/css/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/genfocus/static/css/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/genfocus/static/css/login.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/genfocus/static/js/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/genfocus/static/js/login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/genfocus/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/genfocus/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/login.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/signup.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/signup.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/signup.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/signup.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/registration/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/registration/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/registration/signup.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/registration/signup.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/usergen/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/usergen/main.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/usergen/userslist.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/usergen/userslist.html" afterDir="false" />
-    </list>
+    <list default="true" id="cbe18b92-8574-48e1-bbe2-bb0256c8a43d" name="Changes" comment="Documentation update" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -111,7 +95,7 @@
       <option name="presentableId" value="Default" />
       <updated>1729792481329</updated>
       <workItem from="1729792482667" duration="47108000" />
-      <workItem from="1729887923589" duration="1228000" />
+      <workItem from="1729887923589" duration="1829000" />
     </task>
     <task id="LOCAL-00001" summary="Reworked project">
       <option name="closed" value="true" />
