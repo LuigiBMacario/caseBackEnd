@@ -51,3 +51,10 @@ Cada pessoa cadastrada na API possui os seguintes atributos:
    pip install -r requirements.txt
 
 ## Uso
+
+1. Execute a aplicação:
+   ```bash
+   unicorn main:app --reload
+   
+2. Acesse a API em:
+   http://127.0.0.1:8000
