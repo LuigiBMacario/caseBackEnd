@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/signup.css'%}">
+    <script src="{% static 'js/signup.js'%}"></script>
+    <title>Sign Up | GenFocus</title>
+</head>
+<body>
+    <div class="animation-container">
+        <img class="anim-image" src="" alt="">
+        <div class="form-container">
+            <div class="wrapper">
+                <a href="{% url 'home' %}">
+                    <img class="logo" src="" alt="">
+                </a>
+            <h1 class="signup-title">
+                Inscrever-se
+            </h1>
+                <form action="{% url 'signup'%}" method="post" class="form">
+                    {% csrf_token %}
+                    <label class="signup-label" name="username">
+                        <span>
+                            Nome de usuário
+                        </span>
+                        <input type="text" name="username" class="input" required autocomplete="username">
+                    </label>
+                    <label class="signup-label" name="email">
+                        <span>
+                            E-mail
+                        </span>
+                        <input type="email" name="email" class="input" required autocomplete="email">
+                    </label>
+                    <label class="signup-label" name="password">
+                        <span>
+                            Senha
+                        </span>
+                        <input type="password" name="password" class="input" required autocomplete="123456">
+                    </label>
+                    <label class="signup-label" name="confirm-password">
+                        <span>
+                            Confirme a senha
+                        </span>
+                        <input type="password" name="confirm-password" class="input" required autocomplete="123456">
+                    </label>
+                    <div class="bottom-wrapper">
+                        <button type="submit" name="submit" class="signup-button" disabled>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path d="M11.293 4.707 17.586 11H4v2h13.586l-6.293 6.293 1.414 1.414L21.414 12l-8.707-8.707-1.414 1.414z"/></svg>
+                        </button>
+                        <a href="#" class="signup-link">Não consegue inscrever-se?</a>
+                        <a href="{% url 'login'%}" class="signup-link">fazer login</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

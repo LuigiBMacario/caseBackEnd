@@ -8,6 +8,21 @@
     <title>Home | Gen Focus</title>
 </head>
 <body>
-    
+    <div class="container">
+        <header>
+            <ul>
+                {% if request.user.is.authenticated %}
+                <li><a href="{% url 'logout' %}">Logout</a></li>
+                {% else %}
+                <li><a href="{% url 'login' %}">Login</a></li>
+                <li></li><a href="{% url 'signup' %}">Sign up</a></li>
+                {% endif %}
+            </ul>
+        </header>
+        <nav></nav>
+        <main></main>
+        <aside></aside>
+        <footer></footer>
+    </div>
 </body>
 </html>

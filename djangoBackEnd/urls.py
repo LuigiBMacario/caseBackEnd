@@ -16,9 +16,17 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from genfocus import views
+from django.conf import settings
+from django.conf.urls.static import static
 
+from genfocus.urls import urlpatterns
+
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 urlpatterns = [
-    path("", include('genfocus.urls')),
+    path('', include('genfocus.urls')),
     path('admin/', admin.site.urls),
     path('accounts/', include('django.contrib.auth.urls')),
+    path('usergen/', views.usergen, name='usergen')
 ]

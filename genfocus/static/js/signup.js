@@ -19,14 +19,27 @@ document.addEventListener('DOMContentLoaded', function(){
     }
 
     function handleChange() {
-        const [username, password] = inputs;
+        const [username, email, password, confirmPassword] = inputs;
         const isUsernameValid = username.value.length >= 3;
         const isPasswordValid = password.value.length >= 6;
-        if (isUsernameValid && isPasswordValid) {
+        const isValidEmail = (email) => email.includes('@');
+        const isEmailValid = isValidEmail(email.value);
+        const passwordsMatch = password.value === confirmPassword.value;
+        if (isUsernameValid && isPasswordValid && isEmailValid && passwordsMatch) {
             button.removeAttribute('disabled');
         } else {
             button.setAttribute('disabled', '');
         }
-    }
+    }    
 })
 
+setTimeout(function() {
+    var image = document.querySelector('.anim-image');
+    var formContainer = document.querySelector('.form-container');
+
+    if (image && formContainer) {
+        image.style.height = "100vh";
+
+        formContainer.classList.add('show');
+    }
+}, 1000);

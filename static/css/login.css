@@ -24,14 +24,32 @@ body, html {
     overflow: hidden;
 }
 
+main{
+    display: flex;
+}
+
+.form{
+    width: 100%;
+    height: 100%;
+}
+
 .login{
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-between;
     width: 100%;
     max-width: 500px;
     min-width:100vh;
     padding: clamp(35px, 8%, 70px);
+}
+
+.wrapper{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .login-title{
@@ -77,4 +95,91 @@ body, html {
 .login-label .span-active{
     font-size: 0.7em;
     margin: 8px 10px;
+}
+
+.login-icons{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.login-icons img{
+    width: 20px;
+}
+
+.icons-button{
+    width: 33.33%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 35px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+}
+
+.login-icons .icons-button:nth-child(1){
+    background-color: var(--blue);
+}
+
+.login-icons .icons-button:nth-child(2){
+    background-color: var(--light-grey);
+}
+
+.login-icons .icons-button:nth-child(3){
+    background-color: var(--black);
+}
+
+.login-button{
+    width: 60px;
+    height: 60px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--red);
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 60px;
+}
+
+.login-button svg{
+    fill: white;
+}
+
+.login-button:disabled{
+    cursor: auto;
+    background-color: white;
+    border: 2px solid var(--light-grey);
+}
+
+.login-button:disabled svg{
+    fill: var(--grey);
+}
+
+.login-link{
+    font-size: 0.8em;
+    text-decoration: none;
+    color: var(--medium-grey);
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+
+.wallpaper{
+    width: 100%;
+    background-image: url('../media/loginbg.jpg');
+    background-size: cover;
+    background-position: center;
+    flex: 1;
+}
+
+.sorry-blocked{
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    background-color: rgba(50, 50, 50, 100);
 }

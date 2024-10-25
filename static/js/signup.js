@@ -1,3 +1,14 @@
+setTimeout(function() {
+    var image = document.querySelector('.anim-image');
+    var formContainer = document.querySelector('.form-container');
+
+    if (image && formContainer) {
+        image.style.height = "100vh";
+
+        formContainer.classList.add('show');
+    }
+}, 1000);
+
 const inputs = document.querySelectorAll('.input');
 const button = document.querySelector('.signup-button');
 
@@ -7,7 +18,7 @@ const handleFocus = ({ target }) =>{
 }
 
 const handleFocusOut = ({ target }) =>{
-    if (target.value == ''){
+    if (target.value === ''){
         const span = target.previousElementSibling;
         span.classList.remove('span-active');
     }
@@ -15,10 +26,15 @@ const handleFocusOut = ({ target }) =>{
 
 const handleChange = () => {
     console.log('handleChange')
-    const [username, password] = inputs;
+    const [username, email, password, confirmPassword] = inputs;
     const isUsernameValid = username.value.length >= 3;
     const isPasswordValid = password.value.length >= 6;
-    if (isUsernameValid && isPasswordValid) {
+    const isValidEmail = (email) => {
+        return email.includes('@');
+    }
+    const isEmailValid = isValidEmail(email.value);
+    const passwordsMatch = password.value === confirmPassword.value;
+    if (isUsernameValid && isPasswordValid && isEmailValid && passwordsMatch) {
         button.removeAttribute('disabled');
     } else {
         button.setAttribute('disabled', '');
@@ -35,4 +51,3 @@ inputs.forEach((input) =>
 inputs.forEach((input) =>
     input.addEventListener('input', handleChange)
 );
-
